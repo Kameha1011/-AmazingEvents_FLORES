@@ -111,7 +111,8 @@
   </header>
   <main class="container-fluid">
     <form action="" method="POST" class="container-fluid d-flex flex-column flex-md-row flex-wrap justify-content-md-between align-items-center gap-3 my-5">
-      <fieldset class="d-flex gap-3 justify-content-center">
+      <fieldset class="d-flex flex-wrap gap-3 justify-content-center">
+        <h5 class="flex-gap1 text-center"><i class="bi bi-filter"></i>Filter by Category</h5>       
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="filter1" id="flexCheckDefault1">
           <label class="form-check-label" for="flexCheckDefault1">
@@ -140,7 +141,7 @@
       
       <fieldset class="d-flex gap-2 justify-content-md-center">
         <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search" id="search" name="search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
       </fieldset>
     </form>
     <section>
@@ -149,55 +150,55 @@
         <div class="card ">
           <img src="./assets/images/Cinema.jpg" class="card-img-top object-fit-cover" alt="...">
           <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
+            <h3 class="card-title">Event title <span class="badge bg-dark">Category Name</span></h3>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <a href="#" class="btn btn-dark">Go somewhere</a>
+            <a href="#" class="btn btn-dark">See Details</a>
           </div>
         </div>
         <div class="card ">
           <img src="./assets/images/Costume_Party.jpg" class="card-img-top object-fit-cover" alt="...">
           <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
+            <h3 class="card-title">Event title <span class="badge bg-dark">Category Name</span></h3>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <a href="#" class="btn btn-dark">Go somewhere</a>
+            <a href="#" class="btn btn-dark">See Details</a>
           </div>
         </div>
         <div class="card ">
           <img src="./assets/images/Food_Fair.jpg" class="card-img-top object-fit-cover" alt="...">
           <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
+            <h3 class="card-title">Event title <span class="badge bg-dark">Category Name</span></h3>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <a href="#" class="btn btn-dark">Go somewhere</a>
+            <a href="#" class="btn btn-dark">See Details</a>
           </div>
         </div>
         <div class="card ">
           <img src="./assets/images/Marathon.jpg" class="card-img-top object-fit-cover" alt="...">
           <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
+            <h3 class="card-title">Event title <span class="badge bg-dark">Category Name</span></h3>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <a href="#" class="btn btn-dark">Go somewhere</a>
+            <a href="#" class="btn btn-dark">See Details</a>
           </div>
         </div>
         <div class="card ">
           <img src="./assets/images/Museum_Tour.jpg" class="card-img-top object-fit-cover" alt="...">
           <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
+            <h3 class="card-title">Event title <span class="badge bg-dark">Category Name</span></h3>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <a href="#" class="btn btn-dark">Go somewhere</a>
+            <a href="#" class="btn btn-dark">See Details</a>
           </div>
         </div>
         <div class="card ">
           <img src="./assets/images/Music_Concert.jpg" class="card-img-top object-fit-cover" alt="...">
           <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
+            <h3 class="card-title">Event title <span class="badge bg-dark">Category Name</span></h3>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <a href="#" class="btn btn-dark ">Go somewhere</a>
+            <a href="#" class="btn btn-dark ">See Details</a>
           </div>
         </div>
       </div>
@@ -207,13 +208,19 @@
     class="container-fluid d-flex flex-column flex-md-row justify-content-md-between align-items-center align-items-md-start">
     <ul class="d-flex gap-3">
       <li>
-        <i class="bi bi-instagram"></i>
+        <a href="#">
+          <i class="bi bi-instagram text-dark"></i>
+        </a>
       </li>
       <li>
-        <i class="bi bi-facebook"></i>
+        <a href="#">
+          <i class="bi bi-facebook  text-dark"></i>
+        </a>
       </li>
       <li>
-        <i class="bi bi-whatsapp"></i>
+        <a href="#">
+          <i class="bi bi-whatsapp  text-dark"></i>
+        </a>
       </li>
     </ul>
     <p>&copy;By Omar Flores From Cohort 11 </p>

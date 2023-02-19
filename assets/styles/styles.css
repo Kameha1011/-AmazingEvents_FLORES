@@ -14,7 +14,7 @@ header{
     height: 90vh;
 }
 .carousel-item img{
-    object-fit: cover;
+    object-fit: fill;
 }
 .carousel-caption{
 top: 14rem;    
@@ -25,6 +25,16 @@ main{
 form fieldset:nth-child(2){
     width: 100%;
 }
+form fieldset h5{
+    width: 100%;
+}
+.form-control, .form-control:focus{
+    background-color: #495057;
+    border: none;
+    color: white;
+    box-shadow: none;
+}
+
 .card{
     width: 100%;
     background-color: #d90368;
@@ -56,14 +66,18 @@ footer ul{
 }
 
 @media(min-width: 768px){
-    form fieldset:nth-child(2){
-        width: 50%;
-    }
+   
     .card{
         width: 45%;
     }
+    form fieldset h5{
+        width: auto;
+    }
 }
 @media(min-width: 1024px){
+    form fieldset:nth-child(2){
+        width: 40%;
+    }
     .card{
         width: 30%;
     }
