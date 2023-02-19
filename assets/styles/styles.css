@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+}
+.navbar-brand img{
+    height: 3rem;
+    width: 12rem;
+}
+header{
+    height: 90vh;
+}
+.carousel-item img{
+    object-fit: cover;
+}
+.carousel-caption{
+top: 14rem;    
+}
+main{
+    min-height: 100vh;
+}
+form fieldset:nth-child(2){
+    width: 100%;
+}
+.card{
+    width: 100%;
+    background-color: #d90368;
+    color: black;
+}
+.card img{
+    height: 13rem;
+    object-fit: fill;
+}
+.card a{
+    width: 100%;
+}
+.card a:hover{
+    color: #d90368;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 4rem;
+    background-color: #d90368;
+    padding-top: .5rem;
+}
+footer ul{
+    padding: 0;
+    margin: 0;
+    height: 5vh;
+    list-style: none;
+}
+
+@media(min-width: 768px){
+    form fieldset:nth-child(2){
+        width: 50%;
+    }
+    .card{
+        width: 45%;
+    }
+}
+@media(min-width: 1024px){
+    .card{
+        width: 30%;
+    }
+    .carousel-caption{
+        top: 20rem;    
+        }
+}
+
