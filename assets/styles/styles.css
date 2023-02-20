@@ -11,13 +11,13 @@ body{
     width: 12rem;
 }
 header{
-    height: 90vh;
+    height: 70vh;
 }
 .carousel-item img{
     object-fit: fill;
 }
 .carousel-caption{
-top: 14rem;    
+top: 15rem;    
 }
 main{
     min-height: 50vh;
@@ -43,8 +43,12 @@ form .btn:hover{
 
 .card{
     width: 100%;
-    background-color: #d90368;
+    background-color: rgba(213, 0, 140, 0.26);
     color: black;
+}
+.card .badge{
+    background-color: rgba(255, 0, 140, 0.34);
+    color: rgb(22, 15, 15);
 }
 .card img{
     height: 13rem;
@@ -52,8 +56,10 @@ form .btn:hover{
 }
 .card a{
     width: 100%;
+    background-color: rgba(255, 0, 140, 0.34);
 }
 .card a:hover{
+    background-color: rgba(213, 0, 140, 0.26);
     color: #d90368;
 }
 
@@ -82,6 +88,25 @@ th{
     padding: 0 0 1rem 1rem;
     font-size: 2rem;
     border: 0 1px solid black 0 1px solid black;
+}
+#details{
+    background-color: rgba(255, 0, 140, 0.34);
+    border-radius: 1rem;
+}
+#details .badge{
+    background-color: rgba(213, 0, 140, 0.26);
+}
+#details img{
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+}
+#details>div{
+    padding: 1rem;
+
+}
+#detailsFooter{
+    position: relative;
+    bottom: 0;
 }
 footer{
     display: flex;
@@ -118,10 +143,26 @@ footer ul{
         width: 30%;
     }
     .carousel-caption{
-        top: 20rem;    
+        top: 12rem;    
         }
     th{
         font-size: 2.5rem;
+    }
+    #details{
+        width: 70%;
+    }
+    #details img{
+        border-radius: 1rem 0 0 1rem;
+        width: 100%;
+    }
+    #details>div{
+        width: 75%;
+        padding: 1rem;
+    
+    }
+    #detailsFooter{
+        position: absolute;
+        bottom: 0;
     }
 }
 
