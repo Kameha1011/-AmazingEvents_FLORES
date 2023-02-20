@@ -109,7 +109,26 @@
       </button>
     </div>
   </header>
- 
+  <main class="container-fluid d-flex align-items-center justify-content-center">
+    <form action="/contact" method="post" class="row justify-content-center" id="contact">
+        <h2 class="w-100 text-center display-1">Contact Us</h2>
+        <div class="col-12 mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" id="name" class="form-control ">
+        </div>
+        <div class="col-12 mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" class="form-control ">
+        </div>
+        <div class="col-12  mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control " name="message" id="message"></textarea>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-secondary w-100"> Submit</button>
+        </div>
+    </form>
+  </main>
   <footer
     class="container-fluid d-flex flex-column flex-md-row justify-content-md-between align-items-center align-items-md-start">
     <ul class="d-flex gap-3">

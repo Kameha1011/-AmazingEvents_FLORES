@@ -50,6 +50,14 @@ form fieldset h5{
 .card a:hover{
     color: #d90368;
 }
+
+#contact{
+    width: 100%;
+    height: 30rem;
+}
+#contact textarea{
+    height: 10rem;
+}
 footer{
     display: flex;
     justify-content: space-between;
@@ -72,6 +80,9 @@ footer ul{
     }
     form fieldset h5{
         width: auto;
+    }
+    #contact{
+        width: 60%;
     }
 }
 @media(min-width: 1024px){
