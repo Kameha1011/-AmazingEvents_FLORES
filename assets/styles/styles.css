@@ -5,6 +5,8 @@
 }
 body{
     color: white;
+    overflow: hidden;
+
 }
 .navbar-brand img{
     height: 3rem;
@@ -90,6 +92,9 @@ th{
     border: 0 1px solid black 0 1px solid black;
 }
 #details{
+    width: 90%;
+}
+#details section{
     background-color: rgba(255, 0, 140, 0.34);
     border-radius: 1rem;
 }
@@ -98,10 +103,9 @@ th{
 }
 #details img{
     border-radius: 1rem 1rem 0 0;
-    width: 100%;
 }
-#details>div{
-    padding: 1rem;
+#details section>div{
+    padding: .5rem;
 
 }
 #detailsFooter{
@@ -148,15 +152,17 @@ footer ul{
     th{
         font-size: 2.5rem;
     }
-    #details{
-        width: 70%;
+    
+    #details section{
+        width: 80%;
+        height: 30rem;
     }
     #details img{
         border-radius: 1rem 0 0 1rem;
-        width: 100%;
+        width: 50%;
     }
-    #details>div{
-        width: 75%;
+    #details section>div{
+        width: 50%;
         padding: 1rem;
     
     }
