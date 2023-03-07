@@ -62,7 +62,9 @@ form .btn:hover{
     background-color: rgba(213, 0, 140, 0.26);
     color: #d90368;
 }
-
+.card .card-text {
+    min-height: 5rem;
+}
 #contact{
     width: 100%;
     height: 30rem;
