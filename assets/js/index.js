@@ -20,7 +20,7 @@ const printEvents = (eventArr) =>{
               <p class="card-text">
                 ${event.description}
               </p>
-              <a href="#" class="btn">See Details</a>
+              <a href="./pages/details.html" class="btn">See Details</a>
             </div>
           </div> `;
     }

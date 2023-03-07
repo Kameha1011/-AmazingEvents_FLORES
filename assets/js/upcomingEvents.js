@@ -45,7 +45,7 @@ const printUpcomingEvents = (eventArr, currentDate) =>{
                   <p class="card-text">
                     ${event.description}
                   </p>
-                  <a href="#" class="btn">See Details</a>
+                  <a href="./details.html" class="btn">See Details</a>
                 </div>
               </div> `;
         }
