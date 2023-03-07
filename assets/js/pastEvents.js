@@ -1,27 +1,4 @@
 import data from "./data.js";
-
-/* inner html 
-<div class="card">
-            <img
-              src="./assets/images/Cinema.jpg"
-              class="card-img-top"
-              alt="Event Picture"
-            />
-            <div class="card-body">
-              <h3 class="card-title">
-                Event title <span class="badge">Category Name</span>
-              </h3>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn">See Details</a>
-            </div>
-          </div> */
-/*     Parent div
-        <div
-          class="container d-flex flex-wrap gap-3 justify-content-md-between justify-content-center"
-        ></div> */
 let eventSection = document.getElementById('events');
 let eventFragment = document.createDocumentFragment();
 let eventContainer = document.createElement('div');
