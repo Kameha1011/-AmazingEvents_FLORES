@@ -17,7 +17,11 @@ header{
     object-fit: fill;
 }
 .carousel-caption{
-top: 15rem;    
+    color: rebeccapurple;
+    top: 10rem;    
+}
+.carousel-caption h1{
+    font-size: 5rem;
 }
 main{
     min-height: 50vh;
