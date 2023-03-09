@@ -1,5 +1,5 @@
 import {data} from "./data.js";
 import { printEvents, printCategories } from "./utils.js";
 
-printEvents(data.events, data.currentDate, 'future');
+printEvents(data.events, data.currentDate, 'upcoming');
 printCategories(data.events);
