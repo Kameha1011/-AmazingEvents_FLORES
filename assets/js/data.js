@@ -1,4 +1,4 @@
-const data = {
+export const data = {
     "currentDate": "2022-01-01",
     "events": [
       {
@@ -171,5 +171,3 @@ const data = {
       }
     ]
   }
-
-  export default data;

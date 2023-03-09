@@ -26,12 +26,9 @@ header{
 main{
     min-height: 50vh;
 }
-form fieldset:nth-child(2){
+/* #filterSection form{
     width: 100%;
-}
-form fieldset h5{
-    width: 100%;
-}
+} */
 form .btn{
     background-color: rgba(255, 0, 140, 0.34);
 }
@@ -136,17 +133,12 @@ footer ul{
     .card{
         width: 45%;
     }
-    form fieldset h5{
-        width: auto;
-    }
+
     #contact{
         width: 60%;
     }
 }
 @media(min-width: 1024px){
-    form fieldset:nth-child(2){
-        width: 40%;
-    }
     .card{
         width: 30%;
     }
