@@ -22,7 +22,7 @@ export const printEvents = (eventArray) => {
                 <p class="card-text">
                   ${event.description}
                 </p>
-                <a href="./details.html" class="btn">See Details</a>
+                <a href="./details.html/?id=${event._id}" class="btn">See Details</a>
               </div>
           </div> `;
       })

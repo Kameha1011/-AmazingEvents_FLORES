@@ -28,6 +28,7 @@ filtersContainer.addEventListener('change', () => {
     if( filteredEvents.length > 0 ){
         printEvents( filteredEvents );
     }else{
-        printEvents(events)
+        filteredEvents = [...events];
+        printEvents(filteredEvents);
     }
 } )
