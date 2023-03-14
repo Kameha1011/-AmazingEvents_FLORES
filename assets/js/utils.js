@@ -1,6 +1,12 @@
-const buildEvent = (eventArray) => {
+export const printEvents = (eventArray) => {
     let eventSkeleton = '';
-    eventArray.forEach( (event) => {
+    const eventSection = document.getElementById('events');
+    const eventFragment = document.createDocumentFragment();
+    const eventContainer = document.createElement('div');
+    eventSection.innerHTML = '';
+    eventContainer.classList.add('container', 'd-flex', 'flex-wrap', 'gap-3', 'justify-content-md-center', 'justify-content-center');
+    if(eventArray.length > 0){
+      eventArray.forEach( (event) => {
         eventSkeleton += `
           <div class="card">
               <img
@@ -19,39 +25,21 @@ const buildEvent = (eventArray) => {
                 <a href="./details.html" class="btn">See Details</a>
               </div>
           </div> `;
-    } )
-    return eventSkeleton;
-}
-export const printEvents = (eventArray, currentDate, condition) => {
-    let eventSkeleton = '';
-    const eventSection = document.getElementById('events');
-    const eventFragment = document.createDocumentFragment();
-    const eventContainer = document.createElement('div');
-    eventSection.innerHTML = '';
-    eventContainer.classList.add('container', 'd-flex', 'flex-wrap', 'gap-3', 'justify-content-md-center', 'justify-content-center');
-    if (condition === 'past') {
-      // filtra los past events y los imprime
-      let pastEvents = eventArray.filter( (event) => event.date < currentDate );
-      eventSkeleton = buildEvent(pastEvents);
-    }else if(condition === 'upcoming') {
-      // filtra los upcoming events y los imprime
-      let upcomingEvents = eventArray.filter( (event) => event.date > currentDate );
-      eventSkeleton = buildEvent(upcomingEvents);
+      })
     }else{
-      eventSkeleton = buildEvent(eventArray);
+      eventSkeleton = "<h2 class='display-4 text-center fw-bold'>No se consiguieron resultados</h2>";
     }
     eventContainer.innerHTML = eventSkeleton;
     eventFragment.appendChild(eventContainer);
     eventSection.appendChild(eventFragment);
   }
 
-export const printCategories = (eventsArray) => {
+export const printCategories = (eventsArray, checkboxesContainer) => {
     let categories = [];
-    const filtersContainer = document.getElementById("filters");
     eventsArray.forEach((event) => {
       if (!categories.includes(event.category)) {
         categories.push(event.category);
-        filtersContainer.innerHTML += `
+        checkboxesContainer.innerHTML += `
         <div class="form-check">
         <input
           class="form-check-input"
@@ -66,3 +54,20 @@ export const printCategories = (eventsArray) => {
       }
     })
   }
+export const search = (eventArray, searchText) => {
+  // filtra eventos por el nombre
+  const filteredEvents = eventArray.filter( event => {
+    return event.name.toLowerCase().includes(searchText.toLowerCase())
+  } )
+    return filteredEvents;    
+}
+export const checkboxFilter = (eventArray) => {
+    //recolecto todos los checkboxes y de una vez saco su value con .map
+    const checkedValues = Array.from(document.querySelectorAll('input[type=checkbox]')).map( checkbox => {
+      if(checkbox.checked){
+        return checkbox.value;
+      }
+    } );
+    //retorno los eventos que coincidan con las categorias de checkedValues
+    return eventArray.filter( event => checkedValues.includes(event.category) );
+} 
