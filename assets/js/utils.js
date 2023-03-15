@@ -1,4 +1,4 @@
-export const printEvents = (eventArray) => {
+export const printEvents = (eventArray, detailsRoute) => {
     let eventSkeleton = '';
     const eventSection = document.getElementById('events');
     const eventFragment = document.createDocumentFragment();
@@ -22,18 +22,17 @@ export const printEvents = (eventArray) => {
                 <p class="card-text">
                   ${event.description}
                 </p>
-                <a href="./details.html/?id=${event._id}" class="btn">See Details</a>
+                <a href="${detailsRoute}?id=${event._id}" class="btn">See Details</a>
               </div>
           </div> `;
       })
     }else{
-      eventSkeleton = "<h2 class='display-4 text-center fw-bold'>No se consiguieron resultados</h2>";
+      eventSkeleton = "<h2 class='display-4 text-center fw-bold'>No matches found</h2>";
     }
     eventContainer.innerHTML = eventSkeleton;
     eventFragment.appendChild(eventContainer);
     eventSection.appendChild(eventFragment);
   }
-
 export const printCategories = (eventsArray, checkboxesContainer) => {
     let categories = [];
     eventsArray.forEach((event) => {

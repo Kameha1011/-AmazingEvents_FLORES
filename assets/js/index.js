@@ -8,14 +8,14 @@ const events = data.events;
 
 let filteredEvents = [...events];
 printCategories(events, filtersContainer);
-printEvents(events);
+printEvents(events, './pages/details.html');
 
 searchInput.addEventListener("input", () => {
     //si el input está vacio muestra todos los eventos de vuelta.
     if(searchInput.value !== ''){
-        printEvents(search(filteredEvents, searchInput.value));
+        printEvents(search(filteredEvents, searchInput.value), './pages/details.html');
     }else{
-        printEvents(filteredEvents);
+        printEvents(filteredEvents, './pages/details.html');
     }
 });
 filtersContainer.addEventListener('change', () => {
@@ -24,9 +24,9 @@ filtersContainer.addEventListener('change', () => {
     filteredEvents = checkboxFilter(filteredEvents);
     //esto funciona como seguro para que cuando ningun checkbox este activo te muestre todos los eventos de vuelta
     if( filteredEvents.length > 0 ){
-        printEvents( filteredEvents );
+        printEvents( filteredEvents, './pages/details.html' );
     }else{
         filteredEvents = [...events];
-        printEvents(filteredEvents);
+        printEvents(filteredEvents, './pages/details.html');
     }
 } )
