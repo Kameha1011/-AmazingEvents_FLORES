@@ -11,10 +11,7 @@ body{
     width: 12rem;
 }
 header{
-    height: 70vh;
-}
-.carousel-item img{
-    object-fit: fill;
+    height: 30vh;
 }
 .carousel-caption{
     color: rebeccapurple;
@@ -29,10 +26,10 @@ main{
 /* #filterSection form{
     width: 100%;
 } */
-form .btn{
+#filterSection .btn{
     background-color: rgba(255, 0, 140, 0.34);
 }
-form .btn:hover{
+#filterSection .btn:hover{
     background-color: rgba(213, 0, 140, 0.26);
 }
 .form-control, .form-control:focus{
@@ -53,7 +50,6 @@ form .btn:hover{
 }
 .card img{
     height: 13rem;
-    object-fit: fill;
 }
 .card a{
     width: 100%;
@@ -129,7 +125,9 @@ footer ul{
 }
 
 @media(min-width: 768px){
-   
+    header{
+        height: 60vh;
+    }
     .card{
         width: 45%;
     }
@@ -139,6 +137,9 @@ footer ul{
     }
 }
 @media(min-width: 1024px){
+    header{
+        height: 70vh;
+    }
     .card{
         width: 30%;
     }
