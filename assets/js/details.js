@@ -6,7 +6,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get('id');
 const event = data.events.filter( evt => evt._id == id )[0];
 
-detailsContainer.innerHTML = ` <img src="${event.image}" alt="Event"/>
+detailsContainer.innerHTML = ` <img src="${event.image}" alt="${event.name}"/>
 <div class="mt-3">
   <h2>$ ${event.price}</h2>
   <h3>${event.name} <span class="badge">${event.category}</span></h3>
