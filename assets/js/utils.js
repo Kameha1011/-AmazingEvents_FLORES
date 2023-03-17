@@ -1,3 +1,4 @@
+
 export const printEvents = (eventArray, detailsRoute) => {
   let eventSkeleton = "";
   const eventSection = document.getElementById("events");
@@ -100,4 +101,14 @@ export const triggerCheckboxFilter =  (eventArray,filteredEvents, detailsPath) =
      printEvents(filteredEvents, detailsPath);
    }
    return filteredEvents;
+}
+
+export const fetchData = async () =>{
+  let eventArray;
+   await fetch('/assets/data/amazing.json')
+  .then( (response) => response.json() )
+  .then( events =>{
+      eventArray = events;
+  } )
+  return eventArray;
 }

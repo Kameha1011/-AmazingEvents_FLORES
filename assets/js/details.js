@@ -1,10 +1,12 @@
-import {data} from './data.js';
+import {fetchData} from './utils.js';
+
+const {events} = await fetchData();
 
 const detailsContainer = document.getElementById('detailsContainer');
 const queryString = location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get('id');
-const event = data.events.filter( evt => evt._id == id )[0];
+const event = events.filter( evt => evt._id == id )[0];
 
 detailsContainer.innerHTML = ` <img src="${event.image}" alt="${event.name}"/>
 <div class="mt-3">

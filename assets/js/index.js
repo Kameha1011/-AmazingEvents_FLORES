@@ -1,19 +1,19 @@
-import { data } from "./data.js";
 import {
   printEvents,
   printCategories,
   triggerSearch,
   triggerCheckboxFilter,
+  fetchData
 } from "./utils.js";
+
 
 const searchInput = document.getElementById("search");
 const filtersContainer = document.getElementById("filters");
 const searchForm = document.getElementById("searchForm");
 
 // guardo data.events en una constante para poder volver a su valor cuando no hay nada en las checkboxes o en el input
-const events = data.events;
-
-let filteredEvents = [...events];
+const {events} = await fetchData();
+ let filteredEvents = [...events];
 printCategories(events, filtersContainer);
 printEvents(events, "./pages/details.html");
 
