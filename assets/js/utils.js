@@ -88,7 +88,7 @@ export const triggerSearch = (inputValue, eventArray) => {
     : printEvents(eventArray, "./pages/details.html");
 };
 
-export const triggerCheckboxFilter = (eventArray,filteredEvents, detailsPath) => {
+export const triggerCheckboxFilter =  (eventArray,filteredEvents, detailsPath) => {
    // redefino filtered events a su valor original para que siempre busque entre todos los eventos originales
    filteredEvents = [...eventArray];
    filteredEvents = checkboxFilter(filteredEvents);
@@ -99,4 +99,5 @@ export const triggerCheckboxFilter = (eventArray,filteredEvents, detailsPath) =>
      filteredEvents = [...eventArray];
      printEvents(filteredEvents, detailsPath);
    }
+   return filteredEvents;
 }

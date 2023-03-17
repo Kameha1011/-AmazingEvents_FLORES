@@ -3,7 +3,6 @@ import {
   printEvents,
   printCategories,
   triggerSearch,
-  checkboxFilter,
   triggerCheckboxFilter,
 } from "./utils.js";
 
@@ -24,16 +23,5 @@ searchForm.addEventListener("submit", (e) => {
 });
 
 filtersContainer.addEventListener("change", () => {
-    // redefino filtered events a su valor original para que siempre busque entre todos los eventos originales
-  filteredEvents = [...events];
-  filteredEvents = checkboxFilter(filteredEvents);
-  //esto funciona como seguro para que cuando ningun checkbox este activo te muestre todos los eventos de vuelta
-  if (filteredEvents.length > 0) {
-    printEvents(filteredEvents, "./pages/details.html");
-  } else {
-    filteredEvents = [...events];
-    printEvents(filteredEvents, "./pages/details.html");
-  } 
-  /*  triggerCheckboxFilter(events, filteredEvents, './pages/details.html');
-   console.log(filteredEvents); */
+  filteredEvents = triggerCheckboxFilter(events, filteredEvents, './pages/details.html');
 });
