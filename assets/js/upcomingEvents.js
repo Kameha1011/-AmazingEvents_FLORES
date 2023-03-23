@@ -1,6 +1,6 @@
 import {
   printEvents,
-  printCategories,
+  printCheckboxes,
   triggerSearch,
   triggerCheckboxFilter,
   fetchData
@@ -15,7 +15,7 @@ const upcomingEvents = events.filter((event) => event.date > currentDate);
 let filteredEvents = [...upcomingEvents];
 
 printEvents(upcomingEvents, "./details.html");
-printCategories(upcomingEvents, filtersContainer);
+printCheckboxes(upcomingEvents, filtersContainer);
 
 searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
