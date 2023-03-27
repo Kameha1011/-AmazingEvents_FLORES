@@ -125,24 +125,21 @@ export const fetchData = async () => {
 export const addAttendancePercentage = (eventArray) => {
   // calcula el attendance pecentage y lo añade como atributo para usarlo posteriormente
   eventArray.forEach((event) => {
-    event.attendancePercentage = Math.floor(
-      (event.assistance ? event.assistance : event.estimate / event.capacity) *
-        100
-    );
+    event.attendancePercentage = Math.floor((((event.assistance) ? event.assistance : event.estimate) / event.capacity ) * 100);
   });
 };
 export const addRevenues = (eventArray) => {
   //calcula las ganancias y las añade como atributo para usarlo posteriormente
   eventArray.forEach((event) => {
-    event.revenues = event.assistance
+    event.revenues = (event.assistance
       ? event.assistance
-      : event.estimate * event.price;
+      : event.estimate )* event.price;
   });
 };
 const getHighestCapacity = (eventArray) => {
   // devuelve el evento con mayor capacidad
   return eventArray.reduce((prevEvent, currentEvent) =>
-    prevEvent.capacity > currentEvent.capacity ? prevEvent : currentEvent
+    (prevEvent.capacity > currentEvent.capacity) ? prevEvent : currentEvent
   ).name;
 };
 const getAttendance = (eventArray, condition) => {
@@ -151,7 +148,7 @@ const getAttendance = (eventArray, condition) => {
     return eventArray.find(
       (event) =>
         event.attendancePercentage ===
-        Math.max(...eventArray.map((event) => event.attendancePercentage))
+       Math.max(...eventArray.map((event) => event.attendancePercentage))
     ).name;
   } else {
     return eventArray.find(
@@ -207,8 +204,8 @@ export const calculateStatistics = (eventsByCategoryArray) => {
 export const printAllEventsStatistics = (eventArray, container) => {
   // imprime los datos del primer tbody
   const data = {
-    lowestAttendance: getAttendance(eventArray, ""),
     highestAttendance: getAttendance(eventArray, "highest"),
+    lowestAttendance: getAttendance(eventArray, ""),
     highestCapacity: getHighestCapacity(eventArray),
   };
   const tr = document.createElement("tr");
