@@ -20,6 +20,7 @@
       href="./assets/images/favicon.png"
       type="image/x-icon"
     />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Amazing Events - Home</title>
   </head>
 
@@ -89,18 +90,18 @@
         </div>
         <div class="carousel-inner h-100">
           <div class="carousel-item active h-100">
-              <img
-                src="../assets/images/slide1.jpg"
-                class="d-block w-100 h-100 object-fit-cover"
-                alt="slide1"
-              />
+            <img
+              src="../assets/images/slide1.jpg"
+              class="d-block w-100 h-100 object-fit-cover"
+              alt="slide1"
+            />
           </div>
           <div class="carousel-item h-100">
-              <img
-                src="https://www.clarin.com/img/2022/03/15/el-lollapalooza-2023-tendra-lugar___pJsZiSQlH_2000x1500__1.jpg"
-                class="d-block w-100 h-100 object-fit-cover"
-                alt="slide2"
-              />
+            <img
+              src="https://www.clarin.com/img/2022/03/15/el-lollapalooza-2023-tendra-lugar___pJsZiSQlH_2000x1500__1.jpg"
+              class="d-block w-100 h-100 object-fit-cover"
+              alt="slide2"
+            />
           </div>
           <div class="carousel-item h-100">
             <img
@@ -110,18 +111,18 @@
             />
           </div>
           <div class="carousel-item h-100">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Desfile_Portela_2014_%28906185%29.jpg/1200px-Desfile_Portela_2014_%28906185%29.jpg"
-                class="d-block w-100 h-100 object-fit-cover"
-                alt="slide3"
-              />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Desfile_Portela_2014_%28906185%29.jpg/1200px-Desfile_Portela_2014_%28906185%29.jpg"
+              class="d-block w-100 h-100 object-fit-cover"
+              alt="slide3"
+            />
           </div>
           <div class="carousel-item h-100">
-              <img
-                src="https://djmag.es/wp-content/uploads/2022/09/tomorrowland-we-are-tomorrow-documentary-2022-festival-return-comeback-copy.jpg"
-                class="d-block w-100 h-100 object-fit-cover"
-                alt="slide3"
-              />
+            <img
+              src="https://djmag.es/wp-content/uploads/2022/09/tomorrowland-we-are-tomorrow-documentary-2022-festival-return-comeback-copy.jpg"
+              class="d-block w-100 h-100 object-fit-cover"
+              alt="slide3"
+            />
           </div>
         </div>
         <button
@@ -144,18 +145,25 @@
         </button>
       </div>
     </header>
-    <main class="container-fluid">
-      <section
-        class="row"
-        id="filterSection"
-      >
-        <div class="col-12 col-lg-6 my-3 d-flex flex-column gap-2" id="filterForm">
-          <div class="d-flex gap-3 justify-content-center flex-wrap" id="filters">
+    <main class="container-fluid" id="app">
+      <section class="row" id="filterSection">
+        <div
+          class="col-12 col-lg-6 my-3 d-flex flex-column gap-2"
+          id="filterForm"
+        >
+          <div
+            class="d-flex gap-3 justify-content-center flex-wrap"
+            id="filters"
+          >
             <!-- Aqui van los filtros que se agregan dinámicamente -->
+            {{message}}
           </div>
         </div>
 
-        <form class="col-12 col-lg-6 d-flex align-items-lg-end gap-1 my-3 " id="searchForm">
+        <form
+          class="col-12 col-lg-6 d-flex align-items-lg-end gap-1 my-3"
+          id="searchForm"
+        >
           <input
             class="form-control"
             type="search"
@@ -170,7 +178,28 @@
         </form>
       </section>
       <section id="events">
-      <!-- Aquí van los eventos dinámicos -->
+        <!-- Aquí van los eventos dinámicos -->
+        <div
+          class="container d-flex flex-wrap gap-3 justify-content-md-center justify-content-center"
+        >
+          <div class="card" v-for="event of events">
+            <img
+              :src=event.image
+              class="card-img-top"
+              :alt=event.name
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                {{event.name}} <span class="badge">{{event.category}}</span>
+              </h5>
+              <h5>Date: {{event.date}}</h5>
+              <p class="card-text">{{event.description}}</p>
+              <a href="{{detailsRoute}}?id={{event._id}}" class="btn"
+                >See Details</a
+              >
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer
@@ -200,6 +229,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./assets/js/index.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>
