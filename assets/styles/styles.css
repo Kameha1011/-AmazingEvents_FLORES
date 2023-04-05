@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+}
+.navbar-brand img{
+    height: 3rem;
+    width: 12rem;
+}
+header{
+    height: 30vh;
+}
+.carousel-caption{
+    color: rebeccapurple;
+    top: 10rem;    
+}
+.carousel-caption h1{
+    font-size: 5rem;
+}
+main{
+    min-height: 50vh;
+}
+/* #filterSection form{
+    width: 100%;
+} */
+#filterSection .btn{
+    background-color: rgba(255, 0, 140, 0.34);
+}
+#filterSection .btn:hover{
+    background-color: rgba(213, 0, 140, 0.26);
+}
+.form-control, .form-control:focus{
+    background-color: rgba(255, 0, 140, 0.34);
+    border: none;
+    color: white;
+    box-shadow: none;
+}
+
+.card{
+    width: 100%;
+    background-color: rgba(213, 0, 140, 0.26);
+    color: black;
+}
+.card .badge{
+    background-color: rgba(255, 0, 140, 0.34);
+    color: rgb(22, 15, 15);
+}
+.card img{
+    height: 13rem;
+}
+.card a{
+    width: 100%;
+    background-color: rgba(255, 0, 140, 0.34);
+}
+.card a:hover{
+    background-color: rgba(213, 0, 140, 0.26);
+    color: #d90368;
+}
+.card .card-text {
+    min-height: 5rem;
+}
+#contact{
+    width: 100%;
+    height: 30rem;
+}
+#contact textarea{
+    height: 10rem;
+}
+
+table{
+    width: 100%;
+    color: white;
+    border: 1px solid black;
+}
+td{
+    background-color: rgba(255, 0, 140, 0.34);
+    padding: 1rem;
+    width: 33.3%;
+    height: 3rem;
+    border: 1px solid black;
+}
+th{
+    background-color: rgba(213, 0, 140, 0.26);
+    padding: 0 0 1rem 1rem;
+    font-size: 2rem;
+    border: 0 1px solid black 0 1px solid black;
+}
+#details{
+    width: 90%;
+    min-height: 70vh;
+}
+#details section{
+    background-color: rgba(255, 0, 140, 0.34);
+    border-radius: 1rem;
+}
+#details .badge{
+    background-color: rgba(213, 0, 140, 0.26);
+}
+#details img{
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    height: 30%;
+    object-fit: fill;
+}
+#backBtn{
+    position: absolute;
+    right: 2rem;
+    top: 5rem;
+    background-color: rgba(213, 0, 140, 0.26);
+}
+#details section>div{
+    padding: .5rem;
+
+}
+#detailsFooter{
+    position: relative;
+    bottom: 0;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 4rem;
+    background-color: #d90368;
+    padding-top: .5rem;
+}
+footer ul{
+    padding: 0;
+    margin: 0;
+    height: 5vh;
+    list-style: none;
+}
+
+@media(min-width: 768px){
+    header{
+        height: 60vh;
+    }
+    .card{
+        width: 45%;
+    }
+
+    #contact{
+        width: 60%;
+    }
+}
+@media(min-width: 1024px){
+    header{
+        height: 70vh;
+    }
+    .card{
+        width: 30%;
+    }
+    .carousel-caption{
+        top: 12rem;    
+        }
+    th{
+        font-size: 2.5rem;
+    }
+    
+    #details section{
+        width: 80%;
+        height: 30rem;
+    }
+    #details img{
+        border-radius: 1rem 0 0 1rem;
+        width: 50%;
+    }
+    #details section>div{
+        width: 50%;
+        padding: 1rem;
+    
+    }
+    #detailsFooter{
+        position: absolute;
+        bottom: 0;
+    }
+    #details img{
+        border-radius: 1rem 1rem 0 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+
